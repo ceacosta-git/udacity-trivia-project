@@ -20,6 +20,9 @@ SET default_tablespace = '';
 
 SET default_with_oids = false;
 
+-- Create student role
+ CREATE ROLE student WITH SUPERUSER CREATEDB CREATEROLE;
+
 --
 -- Name: categories; Type: TABLE; Schema: public; Owner: student
 --
