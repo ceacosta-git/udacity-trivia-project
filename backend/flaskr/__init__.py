@@ -13,7 +13,8 @@ def create_app(test_config=None):
     app = Flask(__name__)
 
     if test_config is None:
-        setup_db(app)
+        database_path = f"postgresql://localhost:5432/trivia"
+        setup_db(app, database_path=database_path)
     else:
         database_path = test_config.get('SQLALCHEMY_DATABASE_URI')
         setup_db(app, database_path=database_path)
@@ -37,6 +38,7 @@ def create_app(test_config=None):
     Create an endpoint to handle GET requests
     for all available categories.
     """
+    
 
 
     """
